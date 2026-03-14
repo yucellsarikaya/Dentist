@@ -11,6 +11,7 @@ const menuItems: MenuItem[] = [
   { label: "Doktorlarımız", path: "/doktorlar", icon: "👨‍⚕️" },
   { label: "Fiyatlar", path: "/fiyatlar", icon: "💰" },
   { label: "Galeri", path: "/galeri", icon: "📷" },
+  { label: "SSS", path: "/sss", icon: "❓" },
   { label: "Randevu", path: "/randevu", icon: "📅" },
   { label: "İletişim", path: "/iletisim", icon: "📞" },
 ];

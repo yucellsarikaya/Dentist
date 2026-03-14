@@ -8,6 +8,7 @@ import Appointment from "./pages/Appointment";
 import Contact from "./pages/Contact";
 import Pricing from "./pages/Pricing";
 import Gallery from "./pages/Gallery";
+import FAQPage from "./pages/FAQPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="iletisim" element={<Contact />} />
           <Route path="fiyatlar" element={<Pricing />} />
           <Route path="galeri" element={<Gallery />} />
+          <Route path="sss" element={<FAQPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

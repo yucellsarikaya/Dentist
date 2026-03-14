@@ -5,7 +5,6 @@ import DoctorCard from "../components/common/DoctorCard";
 import TestimonialCard from "../components/common/TestimonialCard";
 import AnimatedCounter from "../components/common/AnimatedCounter";
 import BeforeAfter from "../components/common/BeforeAfter";
-import FAQ from "../components/common/FAQ";
 import { services, doctors, testimonials } from "../config/mockData";
 import "./Home.css";
 
@@ -98,9 +97,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* SSS */}
-      <FAQ />
 
       {/* CTA */}
       <section className="cta-section">
