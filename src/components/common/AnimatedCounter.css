@@ -1,0 +1,57 @@
+.counter-section {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  padding: var(--spacing-2xl) 0;
+}
+
+.counter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.counter-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.counter-icon {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.counter-number {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: var(--spacing-xs);
+}
+
+.counter-label {
+  font-size: var(--font-size-sm);
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .counter-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .counter-number {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .counter-number {
+    font-size: var(--font-size-2xl);
+  }
+
+  .counter-icon {
+    font-size: 1.5rem;
+  }
+}

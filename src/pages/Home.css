@@ -1,0 +1,149 @@
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.section-cta {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  border-radius: var(--border-radius-full);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Neden Biz */
+.why-us-section {
+  background: var(--color-gray-50);
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.why-us-item {
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.why-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+.why-us-item h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-sm);
+}
+
+.why-us-item p {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  line-height: 1.7;
+}
+
+/* Doktorlar */
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+/* Yorumlar */
+.testimonials-section {
+  background: var(--color-gray-50);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+/* CTA */
+.cta-section {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+}
+
+.cta-content {
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+}
+
+.cta-content p {
+  font-size: var(--font-size-lg);
+  opacity: 0.9;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .services-grid,
+  .doctors-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .why-us-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .why-us-item {
+    padding: var(--spacing-md);
+  }
+
+  .why-icon {
+    font-size: 2rem;
+  }
+
+  .cta-content h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .cta-content p {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid,
+  .doctors-grid,
+  .testimonials-grid,
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .cta-content h2 {
+    font-size: var(--font-size-xl);
+  }
+}
