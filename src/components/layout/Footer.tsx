@@ -6,58 +6,63 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="footer-grid">
-          <div className="footer-about">
+        {/* Üst Kısım - CTA Band */}
+        <div className="footer-cta">
+          <div className="footer-cta-text">
+            <h3>Randevu almak ister misiniz?</h3>
+            <p>Hemen bizi arayın veya online randevu oluşturun</p>
+          </div>
+          <div className="footer-cta-actions">
+            <a href={`tel:${clinicConfig.phone}`} className="footer-cta-btn phone">
+              📞 {clinicConfig.phone}
+            </a>
+            <Link to="/randevu" className="footer-cta-btn appointment">
+              Randevu Al
+            </Link>
+          </div>
+        </div>
+
+        {/* Orta Kısım - 3 Kolon */}
+        <div className="footer-main">
+          <div className="footer-col footer-brand">
             <div className="footer-logo">
-              <span className="logo-icon">🦷</span>
+              <span>🦷</span>
               <span>{clinicConfig.name}</span>
             </div>
-            <p>{clinicConfig.slogan}</p>
+            <p className="footer-desc">{clinicConfig.slogan}</p>
             <div className="footer-social">
               {clinicConfig.socialMedia.instagram && (
-                <a href={clinicConfig.socialMedia.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">📷</a>
+                <a href={clinicConfig.socialMedia.instagram} target="_blank" rel="noreferrer">Instagram</a>
               )}
               {clinicConfig.socialMedia.facebook && (
-                <a href={clinicConfig.socialMedia.facebook} target="_blank" rel="noreferrer" aria-label="Facebook">📘</a>
+                <a href={clinicConfig.socialMedia.facebook} target="_blank" rel="noreferrer">Facebook</a>
               )}
               {clinicConfig.socialMedia.whatsapp && (
-                <a href={clinicConfig.socialMedia.whatsapp} target="_blank" rel="noreferrer" aria-label="WhatsApp">💬</a>
+                <a href={clinicConfig.socialMedia.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
               )}
             </div>
           </div>
 
-          <div className="footer-links">
-            <h4>Hızlı Erişim</h4>
-            <ul>
-              <li><Link to="/">Ana Sayfa</Link></li>
-              <li><Link to="/hakkimizda">Hakkımızda</Link></li>
-              <li><Link to="/hizmetler">Hizmetler</Link></li>
-              <li><Link to="/doktorlar">Doktorlarımız</Link></li>
-              <li><Link to="/randevu">Randevu Al</Link></li>
-            </ul>
-          </div>
-
-          <div className="footer-links">
-            <h4>Hizmetler</h4>
-            <ul>
-              <li><Link to="/hizmetler">Diş İmplantı</Link></li>
-              <li><Link to="/hizmetler">Ortodonti</Link></li>
-              <li><Link to="/hizmetler">Diş Beyazlatma</Link></li>
-              <li><Link to="/hizmetler">Estetik Diş</Link></li>
-              <li><Link to="/hizmetler">Kanal Tedavisi</Link></li>
-            </ul>
-          </div>
-
-          <div className="footer-contact">
+          <div className="footer-col">
             <h4>İletişim</h4>
-            <ul>
-              <li>📍 {clinicConfig.location.fullAddress}</li>
-              <li>📞 {clinicConfig.phone}</li>
-              <li>✉️ {clinicConfig.email}</li>
+            <ul className="footer-contact-list">
+              <li>
+                <span className="fc-icon">📍</span>
+                <span>{clinicConfig.location.fullAddress}</span>
+              </li>
+              <li>
+                <span className="fc-icon">📞</span>
+                <a href={`tel:${clinicConfig.phone}`}>{clinicConfig.phone}</a>
+              </li>
+              <li>
+                <span className="fc-icon">✉️</span>
+                <a href={`mailto:${clinicConfig.email}`}>{clinicConfig.email}</a>
+              </li>
             </ul>
           </div>
         </div>
 
+        {/* Alt Kısım */}
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} {clinicConfig.name}. Tüm hakları saklıdır.</p>
         </div>
