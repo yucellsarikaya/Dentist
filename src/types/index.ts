@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { AppointmentStatus, Gender, PaymentMethod, PaymentStatus, ServiceCategory, UserRole } from "../config/enums";
 
 export interface Doctor {
@@ -16,7 +17,7 @@ export interface Service {
   name: string;
   category: ServiceCategory;
   description: string;
-  icon: string;
+  icon: ReactNode;
   image?: string;
   duration: number; // dakika
   price?: number;
@@ -67,7 +68,7 @@ export interface User {
 export interface MenuItem {
   label: string;
   path: string;
-  icon?: string;
+  icon?: ReactNode;
 }
 
 export interface Testimonial {

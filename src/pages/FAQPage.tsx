@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { FaTooth, FaSyringe, FaStethoscope, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import "./FAQPage.css";
 
 interface FAQItem {
@@ -7,10 +8,10 @@ interface FAQItem {
   answer: string;
 }
 
-const faqCategories: { title: string; icon: string; items: FAQItem[] }[] = [
+const faqCategories: { title: string; icon: ReactNode; items: FAQItem[] }[] = [
   {
     title: "Genel Sorular",
-    icon: "🦷",
+    icon: <FaTooth />,
     items: [
       {
         question: "İlk muayene ücretli midir?",
@@ -32,7 +33,7 @@ const faqCategories: { title: string; icon: string; items: FAQItem[] }[] = [
   },
   {
     title: "Tedaviler Hakkında",
-    icon: "💉",
+    icon: <FaSyringe />,
     items: [
       {
         question: "Diş implantı ne kadar sürer?",
@@ -58,7 +59,7 @@ const faqCategories: { title: string; icon: string; items: FAQItem[] }[] = [
   },
   {
     title: "Bakım & Sonrası",
-    icon: "🩺",
+    icon: <FaStethoscope />,
     items: [
       {
         question: "Tedavi sonrası nelere dikkat etmeliyim?",
@@ -123,7 +124,7 @@ export default function FAQPage() {
                       <button className="faq-question" onClick={() => toggle(cat.title, index)}>
                         <span>{item.question}</span>
                         <span className="faq-toggle-icon">
-                          {openItems[cat.title] === index ? "−" : "+"}
+                          {openItems[cat.title] === index ? <FaChevronUp /> : <FaChevronDown />}
                         </span>
                       </button>
                       <div className="faq-answer">

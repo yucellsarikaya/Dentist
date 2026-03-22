@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { FaChevronUp } from "react-icons/fa";
 import "./BackToTop.css";
 
 export default function BackToTop() {
@@ -18,7 +19,7 @@ export default function BackToTop() {
       onClick={scrollToTop}
       aria-label="Yukarı çık"
     >
-      ↑
+      <FaChevronUp />
     </button>
   );
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaSearchPlus, FaTimes } from "react-icons/fa";
 import "./Gallery.css";
 
 interface GalleryItem {
@@ -70,7 +71,7 @@ export default function Gallery() {
               >
                 <img src={item.src} alt={item.title} />
                 <div className="gallery-overlay">
-                  <span className="gallery-zoom">🔍</span>
+                  <span className="gallery-zoom"><FaSearchPlus /></span>
                   <span className="gallery-caption">{item.title}</span>
                 </div>
               </div>
@@ -82,7 +83,7 @@ export default function Gallery() {
       {/* Lightbox */}
       {lightbox && (
         <div className="lightbox" onClick={() => setLightbox(null)}>
-          <button className="lightbox-close" onClick={() => setLightbox(null)}>✕</button>
+          <button className="lightbox-close" onClick={() => setLightbox(null)}><FaTimes /></button>
           <img src={lightbox.src} alt={lightbox.title} onClick={(e) => e.stopPropagation()} />
           <p className="lightbox-caption">{lightbox.title}</p>
         </div>

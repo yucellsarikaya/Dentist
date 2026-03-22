@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaTooth, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import clinicConfig from "../../config/clinic";
 import "./Footer.css";
 
@@ -14,7 +15,7 @@ export default function Footer() {
           </div>
           <div className="footer-cta-actions">
             <a href={`tel:${clinicConfig.phone}`} className="footer-cta-btn phone">
-              📞 {clinicConfig.phone}
+              <FaPhoneAlt /> {clinicConfig.phone}
             </a>
             <Link to="/randevu" className="footer-cta-btn appointment">
               Randevu Al
@@ -26,7 +27,7 @@ export default function Footer() {
         <div className="footer-main">
           <div className="footer-col footer-brand">
             <div className="footer-logo">
-              <span>🦷</span>
+              <span><FaTooth /></span>
               <span>{clinicConfig.name}</span>
             </div>
             <p className="footer-desc">{clinicConfig.slogan}</p>
@@ -47,15 +48,15 @@ export default function Footer() {
             <h4>İletişim</h4>
             <ul className="footer-contact-list">
               <li>
-                <span className="fc-icon">📍</span>
+                <span className="fc-icon"><FaMapMarkerAlt /></span>
                 <span>{clinicConfig.location.fullAddress}</span>
               </li>
               <li>
-                <span className="fc-icon">📞</span>
+                <span className="fc-icon"><FaPhoneAlt /></span>
                 <a href={`tel:${clinicConfig.phone}`}>{clinicConfig.phone}</a>
               </li>
               <li>
-                <span className="fc-icon">✉️</span>
+                <span className="fc-icon"><FaEnvelope /></span>
                 <a href={`mailto:${clinicConfig.email}`}>{clinicConfig.email}</a>
               </li>
             </ul>

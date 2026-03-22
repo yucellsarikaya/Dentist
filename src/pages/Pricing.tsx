@@ -1,4 +1,8 @@
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { FaTooth, FaSyringe, FaTeethOpen, FaInfoCircle } from "react-icons/fa";
+import { TbDental } from "react-icons/tb";
+import { GiSparkles } from "react-icons/gi";
 import "./Pricing.css";
 
 interface PriceItem {
@@ -8,10 +12,10 @@ interface PriceItem {
   popular?: boolean;
 }
 
-const priceCategories: { title: string; icon: string; items: PriceItem[] }[] = [
+const priceCategories: { title: string; icon: ReactNode; items: PriceItem[] }[] = [
   {
     title: "Genel Tedaviler",
-    icon: "🦷",
+    icon: <FaTooth />,
     items: [
       { service: "Diş Muayenesi", description: "Detaylı kontrol ve röntgen", price: "Ücretsiz", popular: true },
       { service: "Diş Dolgusu (Kompozit)", description: "Estetik beyaz dolgu", price: "₺800 - ₺1.500" },
@@ -21,7 +25,7 @@ const priceCategories: { title: string; icon: string; items: PriceItem[] }[] = [
   },
   {
     title: "Kanal Tedavisi",
-    icon: "💉",
+    icon: <FaSyringe />,
     items: [
       { service: "Tek Kanal (Ön Diş)", description: "Ön dişlerde kanal tedavisi", price: "₺1.500 - ₺2.500" },
       { service: "Çok Kanallı (Arka Diş)", description: "Arka dişlerde kanal tedavisi", price: "₺2.000 - ₺3.500" },
@@ -30,7 +34,7 @@ const priceCategories: { title: string; icon: string; items: PriceItem[] }[] = [
   },
   {
     title: "Estetik Diş Hekimliği",
-    icon: "✨",
+    icon: <GiSparkles />,
     items: [
       { service: "Diş Beyazlatma", description: "Profesyonel beyazlatma", price: "₺2.000 - ₺4.000", popular: true },
       { service: "Laminate Veneer (Adet)", description: "Porselen kaplama", price: "₺3.000 - ₺6.000" },
@@ -40,7 +44,7 @@ const priceCategories: { title: string; icon: string; items: PriceItem[] }[] = [
   },
   {
     title: "İmplant & Protez",
-    icon: "🔩",
+    icon: <TbDental />,
     items: [
       { service: "Tek Diş İmplant", description: "Titanyum implant + üst yapı", price: "₺10.000 - ₺18.000", popular: true },
       { service: "All-on-4 İmplant", description: "Tam çene implant", price: "₺80.000 - ₺120.000" },
@@ -50,7 +54,7 @@ const priceCategories: { title: string; icon: string; items: PriceItem[] }[] = [
   },
   {
     title: "Ortodonti",
-    icon: "😁",
+    icon: <FaTeethOpen />,
     items: [
       { service: "Metal Braket", description: "Geleneksel tel tedavisi", price: "₺15.000 - ₺25.000" },
       { service: "Seramik Braket", description: "Estetik tel tedavisi", price: "₺20.000 - ₺30.000" },
@@ -78,7 +82,7 @@ export default function Pricing() {
       <section className="section">
         <div className="container">
           <div className="pricing-note">
-            <span className="pricing-note-icon">ℹ️</span>
+            <span className="pricing-note-icon"><FaInfoCircle /></span>
             <p>
               Fiyatlar tedavinin kapsamına ve hastanın durumuna göre değişiklik gösterebilir.
               Kesin fiyat bilgisi için ücretsiz muayene randevusu alabilirsiniz.

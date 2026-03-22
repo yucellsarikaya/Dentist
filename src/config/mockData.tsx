@@ -1,3 +1,6 @@
+import { FaTooth, FaSyringe, FaTeethOpen, FaGem, FaStethoscope } from "react-icons/fa";
+import { TbDental, TbDentalBroken } from "react-icons/tb";
+import { GiSparkles } from "react-icons/gi";
 import { ServiceCategory } from "./enums";
 import type { Doctor, Service, Testimonial } from "../types";
 
@@ -42,7 +45,7 @@ export const services: Service[] = [
     name: "Diş Dolgusu",
     category: ServiceCategory.GENERAL,
     description: "Çürük dişlerin kompozit veya porselen dolgu ile tedavisi. Estetik ve dayanıklı sonuçlar.",
-    icon: "🦷",
+    icon: <FaTooth />,
     duration: 45,
   },
   {
@@ -50,7 +53,7 @@ export const services: Service[] = [
     name: "Kanal Tedavisi",
     category: ServiceCategory.ENDODONTICS,
     description: "İltihaplanmış veya enfekte olmuş diş sinirlerinin tedavisi. Ağrısız ve güvenli prosedür.",
-    icon: "💉",
+    icon: <FaSyringe />,
     duration: 60,
   },
   {
@@ -58,7 +61,7 @@ export const services: Service[] = [
     name: "Diş İmplantı",
     category: ServiceCategory.IMPLANT,
     description: "Eksik dişlerin titanyum implantlar ile kalıcı ve doğal görünümlü restorasyonu.",
-    icon: "🔩",
+    icon: <TbDental />,
     duration: 90,
   },
   {
@@ -66,7 +69,7 @@ export const services: Service[] = [
     name: "Ortodonti (Tel Tedavisi)",
     category: ServiceCategory.ORTHODONTICS,
     description: "Çapraşık ve düzensiz dişlerin metal veya şeffaf braketler ile düzeltilmesi.",
-    icon: "😁",
+    icon: <FaTeethOpen />,
     duration: 30,
   },
   {
@@ -74,7 +77,7 @@ export const services: Service[] = [
     name: "Diş Beyazlatma",
     category: ServiceCategory.WHITENING,
     description: "Profesyonel diş beyazlatma işlemi ile parlak ve beyaz bir gülümseme.",
-    icon: "✨",
+    icon: <GiSparkles />,
     duration: 60,
   },
   {
@@ -82,7 +85,7 @@ export const services: Service[] = [
     name: "Laminate Veneer",
     category: ServiceCategory.COSMETIC,
     description: "İnce porselen kaplamalar ile mükemmel bir gülüş tasarımı. Doğal ve estetik sonuçlar.",
-    icon: "💎",
+    icon: <FaGem />,
     duration: 60,
   },
   {
@@ -90,7 +93,7 @@ export const services: Service[] = [
     name: "Diş Eti Tedavisi",
     category: ServiceCategory.PERIODONTICS,
     description: "Diş eti hastalıklarının teşhisi ve tedavisi. Sağlıklı diş etleri için kapsamlı bakım.",
-    icon: "🩺",
+    icon: <FaStethoscope />,
     duration: 45,
   },
   {
@@ -98,7 +101,7 @@ export const services: Service[] = [
     name: "Protez (Takma Diş)",
     category: ServiceCategory.PROSTHETICS,
     description: "Sabit veya hareketli protezler ile eksik dişlerin fonksiyonel ve estetik restorasyonu.",
-    icon: "🦷",
+    icon: <TbDentalBroken />,
     duration: 60,
   },
 ];

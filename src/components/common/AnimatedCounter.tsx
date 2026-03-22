@@ -1,18 +1,19 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, type ReactNode } from "react";
+import { FaCalendarAlt, FaSmile, FaUserMd, FaStar } from "react-icons/fa";
 import "./AnimatedCounter.css";
 
 interface CounterItem {
   target: number;
   suffix: string;
   label: string;
-  icon: string;
+  icon: ReactNode;
 }
 
 const counters: CounterItem[] = [
-  { target: 15, suffix: "+", label: "Yıl Deneyim", icon: "📅" },
-  { target: 10000, suffix: "+", label: "Mutlu Hasta", icon: "😊" },
-  { target: 4, suffix: "", label: "Uzman Doktor", icon: "👨‍⚕️" },
-  { target: 98, suffix: "%", label: "Memnuniyet", icon: "⭐" },
+  { target: 15, suffix: "+", label: "Yıl Deneyim", icon: <FaCalendarAlt /> },
+  { target: 10000, suffix: "+", label: "Mutlu Hasta", icon: <FaSmile /> },
+  { target: 4, suffix: "", label: "Uzman Doktor", icon: <FaUserMd /> },
+  { target: 98, suffix: "%", label: "Memnuniyet", icon: <FaStar /> },
 ];
 
 function useCountUp(target: number, duration: number, start: boolean) {

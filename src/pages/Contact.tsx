@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from "react-icons/fa";
 import clinicConfig from "../config/clinic";
 import "./Contact.css";
 
@@ -83,7 +84,7 @@ export default function Contact() {
 
             <div className="contact-info-panel">
               <div className="contact-info-item">
-                <span className="contact-icon">📍</span>
+                <span className="contact-icon"><FaMapMarkerAlt /></span>
                 <div>
                   <h3>Adres</h3>
                   <p>{clinicConfig.location.fullAddress}</p>
@@ -100,21 +101,21 @@ export default function Contact() {
                 </div>
               </div>
               <div className="contact-info-item">
-                <span className="contact-icon">📞</span>
+                <span className="contact-icon"><FaPhoneAlt /></span>
                 <div>
                   <h3>Telefon</h3>
                   <p>{clinicConfig.phone}</p>
                 </div>
               </div>
               <div className="contact-info-item">
-                <span className="contact-icon">✉️</span>
+                <span className="contact-icon"><FaEnvelope /></span>
                 <div>
                   <h3>E-posta</h3>
                   <p>{clinicConfig.email}</p>
                 </div>
               </div>
               <div className="contact-info-item">
-                <span className="contact-icon">🕐</span>
+                <span className="contact-icon"><FaClock /></span>
                 <div>
                   <h3>Çalışma Saatleri</h3>
                   {clinicConfig.workingHours.map((wh) => (

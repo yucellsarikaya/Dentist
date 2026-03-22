@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import "./FAQ.css";
 
 interface FAQItem {
@@ -58,7 +59,7 @@ export default function FAQ() {
               <button className="faq-question" onClick={() => toggle(index)}>
                 <span>{item.question}</span>
                 <span className="faq-toggle-icon">
-                  {openIndex === index ? "−" : "+"}
+                  {openIndex === index ? <FaChevronUp /> : <FaChevronDown />}
                 </span>
               </button>
               <div className="faq-answer">

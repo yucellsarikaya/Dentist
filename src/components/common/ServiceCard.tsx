@@ -1,3 +1,4 @@
+import { FaClock } from "react-icons/fa";
 import type { Service } from "../../types";
 import "./ServiceCard.css";
 
@@ -13,7 +14,7 @@ export default function ServiceCard({ service }: Props) {
       <p className="service-category">{service.category}</p>
       <p className="service-description">{service.description}</p>
       <div className="service-meta">
-        <span>⏱ {service.duration} dk</span>
+        <span><FaClock /> {service.duration} dk</span>
       </div>
     </div>
   );

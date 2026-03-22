@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FaClinicMedical, FaUserMd, FaSmile, FaShieldAlt, FaMoneyBillWave, FaClock, FaBullseye, FaMicroscope, FaHeart, FaGraduationCap } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 import clinicConfig from "../config/clinic";
 import "./About.css";
 
@@ -68,7 +70,7 @@ export default function About() {
           <div className="mission-grid">
             <div className="mission-card">
               <div className="mission-icon-wrapper">
-                <span className="mission-icon">🎯</span>
+                <span className="mission-icon"><FaBullseye /></span>
               </div>
               <h3>Misyonumuz</h3>
               <p>
@@ -79,7 +81,7 @@ export default function About() {
             </div>
             <div className="mission-card">
               <div className="mission-icon-wrapper">
-                <span className="mission-icon">🔭</span>
+                <span className="mission-icon"><FaEye /></span>
               </div>
               <h3>Vizyonumuz</h3>
               <p>
@@ -101,7 +103,7 @@ export default function About() {
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon-bg">
-                <span>🏥</span>
+                <span><FaClinicMedical /></span>
               </div>
               <div className="feature-content">
                 <h3>Modern Klinik</h3>
@@ -110,7 +112,7 @@ export default function About() {
             </div>
             <div className="feature-card">
               <div className="feature-icon-bg">
-                <span>👨‍⚕️</span>
+                <span><FaUserMd /></span>
               </div>
               <div className="feature-content">
                 <h3>Uzman Kadro</h3>
@@ -119,7 +121,7 @@ export default function About() {
             </div>
             <div className="feature-card">
               <div className="feature-icon-bg">
-                <span>😊</span>
+                <span><FaSmile /></span>
               </div>
               <div className="feature-content">
                 <h3>Hasta Memnuniyeti</h3>
@@ -128,7 +130,7 @@ export default function About() {
             </div>
             <div className="feature-card">
               <div className="feature-icon-bg">
-                <span>🛡️</span>
+                <span><FaShieldAlt /></span>
               </div>
               <div className="feature-content">
                 <h3>Hijyen & Sterilizasyon</h3>
@@ -137,7 +139,7 @@ export default function About() {
             </div>
             <div className="feature-card">
               <div className="feature-icon-bg">
-                <span>💰</span>
+                <span><FaMoneyBillWave /></span>
               </div>
               <div className="feature-content">
                 <h3>Uygun Fiyat</h3>
@@ -146,7 +148,7 @@ export default function About() {
             </div>
             <div className="feature-card">
               <div className="feature-icon-bg">
-                <span>🕐</span>
+                <span><FaClock /></span>
               </div>
               <div className="feature-content">
                 <h3>Esnek Çalışma Saatleri</h3>
@@ -164,22 +166,22 @@ export default function About() {
           <p className="section-subtitle">Bizi biz yapan temel değerler</p>
           <div className="values-grid">
             <div className="value-item">
-              <span className="value-icon">🎯</span>
+              <span className="value-icon"><FaBullseye /></span>
               <h3>Güvenilirlik</h3>
               <p>Hastalarımızın sağlığı ve güveni her zaman önceliğimizdir.</p>
             </div>
             <div className="value-item">
-              <span className="value-icon">🔬</span>
+              <span className="value-icon"><FaMicroscope /></span>
               <h3>Teknoloji</h3>
               <p>En son teknolojik gelişmeleri takip eder ve uygularız.</p>
             </div>
             <div className="value-item">
-              <span className="value-icon">❤️</span>
+              <span className="value-icon"><FaHeart /></span>
               <h3>İnsan Odaklılık</h3>
               <p>Her hastamıza birey olarak yaklaşır, özel ilgi gösteririz.</p>
             </div>
             <div className="value-item">
-              <span className="value-icon">📚</span>
+              <span className="value-icon"><FaGraduationCap /></span>
               <h3>Sürekli Gelişim</h3>
               <p>Ekibimiz sürekli eğitim alarak kendini geliştirir.</p>
             </div>

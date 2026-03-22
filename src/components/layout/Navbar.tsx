@@ -1,19 +1,20 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FaTooth, FaHome, FaInfoCircle, FaUserMd, FaMoneyBillWave, FaImages, FaQuestionCircle, FaCalendarCheck, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import clinicConfig from "../../config/clinic";
 import type { MenuItem } from "../../types";
 import "./Navbar.css";
 
 const menuItems: MenuItem[] = [
-  { label: "Ana Sayfa", path: "/", icon: "🏠" },
-  { label: "Hakkımızda", path: "/hakkimizda", icon: "ℹ️" },
-  { label: "Hizmetler", path: "/hizmetler", icon: "🦷" },
-  { label: "Doktorlarımız", path: "/doktorlar", icon: "👨‍⚕️" },
-  { label: "Fiyatlar", path: "/fiyatlar", icon: "💰" },
-  { label: "Galeri", path: "/galeri", icon: "📷" },
-  { label: "SSS", path: "/sss", icon: "❓" },
-  { label: "Randevu", path: "/randevu", icon: "📅" },
-  { label: "İletişim", path: "/iletisim", icon: "📞" },
+  { label: "Ana Sayfa", path: "/", icon: <FaHome /> },
+  { label: "Hakkımızda", path: "/hakkimizda", icon: <FaInfoCircle /> },
+  { label: "Hizmetler", path: "/hizmetler", icon: <FaTooth /> },
+  { label: "Doktorlarımız", path: "/doktorlar", icon: <FaUserMd /> },
+  { label: "Fiyatlar", path: "/fiyatlar", icon: <FaMoneyBillWave /> },
+  { label: "Galeri", path: "/galeri", icon: <FaImages /> },
+  { label: "SSS", path: "/sss", icon: <FaQuestionCircle /> },
+  { label: "Randevu", path: "/randevu", icon: <FaCalendarCheck /> },
+  { label: "İletişim", path: "/iletisim", icon: <FaPhoneAlt /> },
 ];
 
 export default function Navbar() {
@@ -30,7 +31,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo">
-          <span className="logo-icon">🦷</span>
+          <span className="logo-icon"><FaTooth /></span>
           <span className="logo-text">{clinicConfig.name}</span>
         </Link>
 
@@ -82,8 +83,8 @@ export default function Navbar() {
           {/* Mobil alt bilgi */}
           <li className="mobile-menu-footer">
             <div className="mobile-contact">
-              <a href={`tel:${clinicConfig.phone}`}>📞 {clinicConfig.phone}</a>
-              <a href={`mailto:${clinicConfig.email}`}>✉️ {clinicConfig.email}</a>
+              <a href={`tel:${clinicConfig.phone}`}><FaPhoneAlt /> {clinicConfig.phone}</a>
+              <a href={`mailto:${clinicConfig.email}`}><FaEnvelope /> {clinicConfig.email}</a>
             </div>
             <div className="mobile-social">
               {clinicConfig.socialMedia.instagram && (

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaClinicMedical, FaUserMd, FaSmile, FaMoneyBillWave } from "react-icons/fa";
 import HeroSlider from "../components/common/HeroSlider";
 import ServiceCard from "../components/common/ServiceCard";
 import DoctorCard from "../components/common/DoctorCard";
@@ -42,22 +43,22 @@ export default function Home() {
           <h2 className="section-title">Neden Bizi Tercih Etmelisiniz?</h2>
           <div className="why-us-grid">
             <div className="why-us-item">
-              <span className="why-icon">🏥</span>
+              <span className="why-icon"><FaClinicMedical /></span>
               <h3>Modern Klinik</h3>
               <p>Son teknoloji cihazlar ve sterilizasyon standartları ile donatılmış modern klinik.</p>
             </div>
             <div className="why-us-item">
-              <span className="why-icon">👨‍⚕️</span>
+              <span className="why-icon"><FaUserMd /></span>
               <h3>Uzman Kadro</h3>
               <p>Alanında uzman ve deneyimli diş hekimleri ile güvenilir tedavi.</p>
             </div>
             <div className="why-us-item">
-              <span className="why-icon">😊</span>
+              <span className="why-icon"><FaSmile /></span>
               <h3>Hasta Memnuniyeti</h3>
               <p>10.000'den fazla mutlu hasta ile %98 memnuniyet oranı.</p>
             </div>
             <div className="why-us-item">
-              <span className="why-icon">💰</span>
+              <span className="why-icon"><FaMoneyBillWave /></span>
               <h3>Uygun Fiyat</h3>
               <p>Kaliteli hizmeti uygun fiyatlarla sunuyor, taksit seçenekleri sağlıyoruz.</p>
             </div>

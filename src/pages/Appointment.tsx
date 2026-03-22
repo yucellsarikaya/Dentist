@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaPhoneAlt, FaWhatsapp, FaClock } from "react-icons/fa";
 import { doctors, services } from "../config/mockData";
 import "./Appointment.css";
 
@@ -163,19 +164,19 @@ export default function Appointment() {
 
             <div className="appointment-info">
               <div className="info-card">
-                <h3>📞 Telefonla Randevu</h3>
+                <h3><FaPhoneAlt /> Telefonla Randevu</h3>
                 <p>Bizi arayarak da randevu alabilirsiniz.</p>
                 <a href="tel:+902125550000" className="info-link">+90 (212) 555 0000</a>
               </div>
               <div className="info-card">
-                <h3>💬 WhatsApp</h3>
+                <h3><FaWhatsapp /> WhatsApp</h3>
                 <p>WhatsApp üzerinden yazarak randevu alın.</p>
                 <a href="https://wa.me/902125550000" className="info-link" target="_blank" rel="noreferrer">
                   WhatsApp ile İletişim
                 </a>
               </div>
               <div className="info-card">
-                <h3>🕐 Çalışma Saatleri</h3>
+                <h3><FaClock /> Çalışma Saatleri</h3>
                 <p>Pazartesi - Cuma: 09:00 - 18:00</p>
                 <p>Cumartesi: 10:00 - 14:00</p>
                 <p>Pazar: Kapalı</p>
